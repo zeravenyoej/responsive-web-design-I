@@ -1,3 +1,229 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Your code starts here! */
+
+body {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+/**************************HEADER STYLING************************/
+header {
+    margin: 30px 0px 30px 0px;
+    display: flex;
+    /* justify-content: space-evenly; */
+	/* border: 1px solid grey; */
+}
+
+header .headerLeftSide, header .headerRightSide {
+    height: 100%;
+}
+
+header .headerLeftSide {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .headerRightSide {
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header .headerLeftSide .links {
+    display: flex;
+    align-items: flex-end;
+    padding-top: 10px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: grey;
+    margin-right: 70px;
+}
 
 
+
+/********************************MAIN TITLE STYLING***************/
+.mainTitle {
+    padding: 0px;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainTitle .leftSide {
+    display: flex;
+    flex-direction: column;
+	width: 49%;
+    height: 100%;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+.mainTitle .rightSide {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 50px;
+}
+
+
+
+
+.mainTitle .leftSide h1 {
+	font-size:5rem;
+	text-align: center;
+}
+
+.mainTitle .leftSide button {
+	margin: 0 auto;
+    display: block;
+    padding: 5px 55px;
+    border: 2px solid black;
+    /* font-weight: bold; */
+}
+
+/* .leftSide button #buttonText {
+    font-weight: bold;
+} */
+
+
+
+
+/***************************CONTENT STYLING********************/
+
+
+
+/********************************TOP CONTENT STYLING*************/
+
+.topContent{
+    border-top: 2px solid black;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 97%;
+}
+
+.topContent .features, .topContent .about {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+}
+
+.features {
+    padding-left: 30px;
+}
+
+.about {
+    padding-left: 30px;
+}
+#mainImage {
+	margin: 30px;
+}
+
+
+
+/*************************BOTTOM CONTENT STYLING****************/
+
+
+.bottomContent{
+    border-bottom: 2px solid black;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 97%;
+    margin: 30px
+}
+
+
+.services, .product, .vision {
+	display: inline-block;
+}
+
+.contact {
+	margin: 30px;
+}
+
+/******************************CONTENT STYLING********************/
+
+.contact p {
+	margin-bottom: 20px;
+}
+
+.titleOfContent {
+	font-weight:bold;
+	padding-bottom: 10px;
+}
+
+#mainImage img {
+	width: 100%;
+}
+
+footer {
+	margin: 30px;
+	text-align: center;
+}
