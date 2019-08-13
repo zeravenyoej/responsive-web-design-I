@@ -88,28 +88,38 @@ header .header {
 }
 
 
-header .headerLeftSide .links {
-    display: flex;
+header .links {
+    display:flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 10px;
+    flex-grow: 1;
 }
 
 header nav a {
     text-decoration: none;
     color: grey;
-    margin-right: 70px;
+    /* margin-right: 70px; */
 }
 
-header nav a, .headerImage {
+
+header nav a {
     border-bottom: 1px solid grey;
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
+.headerImage {
+    border-bottom: 1px solid grey;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+}
+
 .headerImage img {
-    padding: 2%;
+    /* padding: 2%; */
+    width: 100%;
 }
 
 /********************************MAIN TITLE STYLING***************/
