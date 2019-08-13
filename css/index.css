@@ -65,8 +65,8 @@ h1, h2, h3, h4, h5 {
 
 /* Your code starts here! */
 
-body {
-	width: 90%;
+.container {
+	width: 975px;
 	margin: 0 auto;
 }
 
@@ -74,30 +74,22 @@ body {
 header {
     margin: 30px 0px 30px 0px;
     display: flex;
-    /* justify-content: space-evenly; */
-	/* border: 1px solid grey; */
 }
 
-header .headerLeftSide, header .headerRightSide {
-    height: 100%;
-}
 
-header .headerLeftSide {
-    width: 80%;
+header .header {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
     padding-left: 30px;
 }
 
-header .headerRightSide {
-    width: 20%;
-    display: flex;
-    justify-content: flex-end;
-}
 
 header .headerLeftSide .links {
     display: flex;
-    align-items: flex-end;
+    justify-content: space-between;
+    align-items: center;
     padding-top: 10px;
 }
 
@@ -112,21 +104,20 @@ header nav a {
 /********************************MAIN TITLE STYLING***************/
 .mainTitle {
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: flex-end;
+    padding-top: 50px;
 }
 
 .mainTitle .leftSide {
     display: flex;
     flex-direction: column;
-	width: 55%;
     height: 100%;
-    padding: 10% 8%;
+    padding: 6% 8%;
 }
 
 .mainTitle .rightSide {
-    width: 45%;
-    height: 100%;
-    /* padding-bottom: 30px; */
+    height: 90%;
+    display: flex;
 }
 
 .mainTitle .rightSide #bigPic {
@@ -137,7 +128,8 @@ header nav a {
 
 .mainTitle .leftSide h1 {
 	font-size:5rem;
-	text-align: center;
+    text-align: center;
+
 }
 
 .mainTitle .leftSide button {
@@ -146,47 +138,30 @@ header nav a {
     padding: 5px 40px;
     border: 2px solid black;
     background: white;
-    /* font-weight: bold; */
 }
 
-/* .leftSide button #buttonText {
-    font-weight: bold;
-} */
-
-
-
-
 /***************************CONTENT STYLING********************/
-.contentContainer {
-    
+.content {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 }
 
 
 /********************************TOP CONTENT STYLING*************/
 
 .topContent{
-    border-top: 2px solid black;
     padding-top: 30px;
     display: flex;
     justify-content: space-between;
-    width: 97%;
+    width: 100%;
 }
 
-.topContent .features, .topContent .about {
-    display: flex;
-    flex-direction: column;
-    width: 49%;
+.mainImageContainer {
+    margin: 30px 0;
 }
 
-.features {
-    padding-left: 30px;
-}
-
-.about {
-    padding-left: 30px;
-}
 #mainImage {
-	margin: 30px;
+    width: 100%;
 }
 
 
@@ -195,17 +170,13 @@ header nav a {
 
 
 .bottomContent{
-    border-bottom: 2px solid black;
     padding-bottom: 30px;
     display: flex;
     justify-content: space-between;
-    width: 97%;
-    margin: 30px
 }
 
-
 .services, .product, .vision {
-	display: inline-block;
+    width: 33%;
 }
 
 .contact {
@@ -236,22 +207,69 @@ footer {
 
 /************************MEDIA QUERIES***********************/
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width:800px) {
+
     .container {
-        width: 
+        margin: 0 15px;
     }
+
+    .links {
+        width: 100%;
+    }
+
+    .header {
+        display: flex;
+        flex-flow: column-reverse;
+    }
+
+    .header div:nth-child(1) {
+        width: 100%;
+    }
+
     .mainTitle .rightSide {
         display: none;
     }    
+
     .mainTitle .leftSide {
         padding-bottom: 80px;
+        display: flex;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+    .mainTitle .rightSide {
+        display:none;
+    }
+
+    .mainTitle {
         display: flex;
         justify-content: center;
     }
 
-    .content {
-        margin: 0 auto;
+    .topContent{
+        display: flex;
+        flex-direction: column;
     }
 
-
+    .bottomContent {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
     }
+
+    .services, .product, .vision {
+        width: 100%;
+    }
+}
