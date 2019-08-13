@@ -18,7 +18,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
+	/* border: 0; */
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -50,6 +50,9 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
+    max-width: 100%;
+    max-height:100%;
+    border: 1px solid black;
 }
 
 html, body {
@@ -66,13 +69,13 @@ h1, h2, h3, h4, h5 {
 /* Your code starts here! */
 
 .container {
-	width: 975px;
-	margin: 0 auto;
+	width: 100%;
+	/* margin: 0 auto; */
 }
 
 /**************************HEADER STYLING************************/
 header {
-    margin: 30px 0px 30px 0px;
+    /* margin: 10% 0%; */
     display: flex;
 }
 
@@ -81,8 +84,7 @@ header .header {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
-    padding-left: 30px;
+    align-items: center;s
 }
 
 
@@ -99,7 +101,16 @@ header nav a {
     margin-right: 70px;
 }
 
+header nav a, .headerImage {
+    border-bottom: 1px solid grey;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
+.headerImage img {
+    padding: 2%;
+}
 
 /********************************MAIN TITLE STYLING***************/
 .mainTitle {
@@ -209,14 +220,14 @@ footer {
 
 @media screen and (max-width:800px) {
     .container {
-        margin: 0 30px;
+        /* margin: 0 30px; */
     }
 
     .links {
         display: flex;
         justify-content: space-between;
         width: 100%;
-        margin-top: 50px;
+        margin-top: 5%;    
     }
 
     .header {
@@ -241,9 +252,11 @@ footer {
 
 @media screen and (max-width: 500px) {
 
+
     .header {
         display: flex;
         flex-direction: column-reverse;
+        /* margin: 10% 0%; */
     }
 
     .links {
@@ -252,7 +265,7 @@ footer {
     }
 
     .links a {
-        border: 1px solid grey;
+        /* border: 1px solid grey; */
         width: 100%;
         padding: 2% 45%;
 
@@ -276,6 +289,12 @@ footer {
     .about, .product, .vision {
         padding-top: 30px;
     }
+
+    /* This isn't doing anything below */
+
+    /* .mainImageContainer img{
+        width: 100%;
+    } */
 
     .bottomContent {
         width: 95%;
